@@ -32,6 +32,7 @@ def get_common_options(helper):
     return host, version, community
 
 def verify_host(host, helper):
+    netsnmp.verbose=0
     if host == "" or host is None:
         helper.exit(summary="Hostname must be specified", exit_code=unknown, perfdata='')
 
